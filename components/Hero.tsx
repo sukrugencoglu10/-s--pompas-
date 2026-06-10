@@ -63,13 +63,13 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="max-w-md"
         >
-          <h1 className="font-heading text-2xl font-black uppercase leading-[1.15] tracking-tight md:text-3xl">
+          <h1 className="font-heading text-[1.72rem] font-black uppercase leading-[1.15] tracking-tight md:text-[2.16rem]">
             Airmax Bayisi Olmak
             <br />
             İster Misiniz?
           </h1>
 
-          <p className="mt-2.5 max-w-sm text-sm text-white/85 md:text-base">
+          <p className="mt-2.5 max-w-sm text-base text-white/85 md:text-lg">
             Güçlü bir marka ile büyüyen iş ortaklığı fırsatını keşfedin.
             Türkiye&apos;nin yeni nesil ısı pompası pazarında yerinizi alın.
           </p>
@@ -79,14 +79,14 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackContactClick("whatsapp")}
-            className="btn-outline mt-4 w-full px-6 py-3 text-xs sm:w-auto"
+            className="btn-outline mt-4 w-full px-7 py-3 text-sm sm:w-auto"
           >
             <MessageCircle className="h-4 w-4" />
             WhatsApp&apos;tan Yazın
           </a>
 
           {/* özellik şeridi */}
-          <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1.5 text-xs font-medium text-white/80">
+          <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1.5 text-[13px] font-medium text-white/80">
             <span>A+++ Verimlilik</span>
             <span className="hidden sm:inline">•</span>
             <span>-35°C&apos;ye Kadar</span>
