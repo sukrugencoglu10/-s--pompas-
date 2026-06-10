@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #13385a;
+  --navy-dark: #0e2a45;
+  --surface: #f5f7f9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* klavye kullanıcıları için görünür focus halkası */
+:focus-visible {
+  outline: 2px solid #13385a;
+  outline-offset: 2px;
+}
+
+/* iOS form zoom önleme — input font-size min 16px */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+/* hareket azaltma tercihi — animasyon ve yumuşak kaydırmayı kapat */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@layer components {
+  /* airmaxenerji.com.tr stilinde navy pill buton */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-navy px-8 py-4 text-sm font-bold uppercase tracking-wide text-white transition-all hover:bg-navy-dark focus:outline-none focus:ring-4 focus:ring-navy/25 active:scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white px-8 py-4 text-sm font-bold uppercase tracking-wide text-white transition-all hover:bg-white hover:text-navy focus:outline-none focus:ring-4 focus:ring-white/30 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-navy bg-white px-8 py-4 text-sm font-bold uppercase tracking-wide text-navy transition-all hover:bg-navy hover:text-white focus:outline-none focus:ring-4 focus:ring-navy/20 active:scale-[0.98];
+  }
+
+  .section {
+    @apply mx-auto w-full max-w-6xl px-5 py-16 md:px-8 md:py-20;
+  }
+
+  /* UPPERCASE başlık + ince alt çizgi (site stili) */
+  .section-title {
+    @apply font-heading text-2xl font-bold uppercase tracking-tight text-navy md:text-[32px];
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-line bg-white px-4 py-3 text-ink placeholder:text-muted transition-colors focus:border-navy focus:outline-none focus:ring-4 focus:ring-navy/10;
+  }
+}
