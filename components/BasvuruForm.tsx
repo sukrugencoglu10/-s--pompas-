@@ -51,16 +51,16 @@ export default function BasvuruForm() {
   return (
     <div
       id="basvuru"
-      className="scroll-mt-24 rounded-xl bg-white p-4 shadow-2xl shadow-black/20 md:p-5"
+      className="scroll-mt-24 rounded-xl bg-white p-3 shadow-2xl shadow-black/20 md:p-4"
     >
-      <h2 className="font-heading text-base font-bold uppercase tracking-tight text-navy">
+      <h2 className="font-heading text-sm font-bold uppercase tracking-tight text-navy">
         Bayilik Başvurusu
       </h2>
-      <p className="mt-0.5 text-xs text-muted">
+      <p className="mt-0.5 text-[11px] text-muted">
         24 saat içinde sizi arayalım — ücretsiz görüşme.
       </p>
 
-      <form onSubmit={handleSubmit(onSubmit)} noValidate className="mt-3.5 space-y-2.5">
+      <form onSubmit={handleSubmit(onSubmit)} noValidate className="mt-3 space-y-2">
         <Field id="adSoyad" label="Ad Soyad" error={errors.adSoyad?.message} required>
           <input
             {...register("adSoyad")}
@@ -134,21 +134,21 @@ export default function BasvuruForm() {
           </select>
         </Field>
 
-        <div className="space-y-2 pt-0.5">
-          <label className="flex cursor-pointer items-start gap-2 text-xs text-muted">
+        <div className="space-y-1.5 pt-0.5">
+          <label className="flex cursor-pointer items-start gap-2 text-[11px] text-muted">
             <input
               {...register("whatsappOnay")}
               type="checkbox"
-              className="mt-0.5 h-4 w-4 shrink-0 rounded border-line text-navy focus:ring-navy"
+              className="mt-0.5 h-3.5 w-3.5 shrink-0 rounded border-line text-navy focus:ring-navy"
             />
             <span>WhatsApp üzerinden iletişime geçilmesini tercih ederim.</span>
           </label>
 
-          <label className="flex cursor-pointer items-start gap-2 text-xs text-muted">
+          <label className="flex cursor-pointer items-start gap-2 text-[11px] text-muted">
             <input
               {...register("kvkkOnay")}
               type="checkbox"
-              className="mt-0.5 h-4 w-4 shrink-0 rounded border-line text-navy focus:ring-navy"
+              className="mt-0.5 h-3.5 w-3.5 shrink-0 rounded border-line text-navy focus:ring-navy"
               aria-invalid={!!errors.kvkkOnay}
               aria-describedby={errors.kvkkOnay ? "kvkkOnay-error" : undefined}
             />
@@ -165,14 +165,14 @@ export default function BasvuruForm() {
             </span>
           </label>
           {errors.kvkkOnay && (
-            <p id="kvkkOnay-error" role="alert" className="text-xs text-red-600">
+            <p id="kvkkOnay-error" role="alert" className="text-[11px] text-red-600">
               {errors.kvkkOnay.message}
             </p>
           )}
         </div>
 
         {errors.root && (
-          <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-xs text-red-600">
+          <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-[11px] text-red-600">
             {errors.root.message}
           </p>
         )}
@@ -180,23 +180,23 @@ export default function BasvuruForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="btn-primary w-full px-6 py-3 text-xs disabled:cursor-not-allowed disabled:opacity-70"
+          className="btn-primary w-full px-5 py-2.5 text-[11px] disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isSubmitting ? (
             <>
-              <Loader2 className="h-4 w-4 animate-spin" />
+              <Loader2 className="h-3.5 w-3.5 animate-spin" />
               Gönderiliyor...
             </>
           ) : (
             <>
-              <Send className="h-3.5 w-3.5" />
+              <Send className="h-3 w-3" />
               Başvurumu Gönder
             </>
           )}
         </button>
 
-        <p className="flex items-center justify-center gap-1.5 text-center text-[11px] text-muted">
-          <Lock className="h-3 w-3" />
+        <p className="flex items-center justify-center gap-1.5 text-center text-[10px] text-muted">
+          <Lock className="h-2.5 w-2.5" />
           Bilgileriniz güvende, 3. şahıslarla paylaşılmaz.
         </p>
       </form>
@@ -221,7 +221,7 @@ function Field({
     <div>
       <label
         htmlFor={id}
-        className="mb-0.5 block text-xs font-semibold text-navy"
+        className="mb-0.5 block text-[11px] font-semibold text-navy"
       >
         {label}{" "}
         {required && (
