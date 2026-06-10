@@ -55,21 +55,21 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
-      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-8 px-5 py-12 md:px-8 md:py-16 lg:grid-cols-2 lg:gap-11">
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-6 px-5 py-9 md:px-8 md:py-12 lg:grid-cols-2 lg:gap-9">
         {/* sol kolon — metin */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="max-w-lg"
+          className="max-w-md"
         >
-          <h1 className="font-heading text-3xl font-black uppercase leading-[1.1] tracking-tight md:text-4xl">
+          <h1 className="font-heading text-2xl font-black uppercase leading-[1.15] tracking-tight md:text-3xl">
             Airmax Bayisi Olmak
             <br />
             İster Misiniz?
           </h1>
 
-          <p className="mt-4 max-w-md text-base text-white/85 md:text-lg">
+          <p className="mt-3 max-w-sm text-sm text-white/85 md:text-base">
             Güçlü bir marka ile büyüyen iş ortaklığı fırsatını keşfedin.
             Türkiye&apos;nin yeni nesil ısı pompası pazarında yerinizi alın.
           </p>
@@ -79,14 +79,14 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackContactClick("whatsapp")}
-            className="btn-outline mt-5 w-full sm:w-auto"
+            className="btn-outline mt-4 w-full px-6 py-3 text-xs sm:w-auto"
           >
             <MessageCircle className="h-4 w-4" />
             WhatsApp&apos;tan Yazın
           </a>
 
           {/* özellik şeridi */}
-          <div className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-[13px] font-medium text-white/80">
+          <div className="mt-6 flex flex-wrap gap-x-5 gap-y-1.5 text-xs font-medium text-white/80">
             <span>A+++ Verimlilik</span>
             <span className="hidden sm:inline">•</span>
             <span>-35°C&apos;ye Kadar</span>
